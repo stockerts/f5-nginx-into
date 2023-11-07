@@ -1,3 +1,5 @@
+.. _my-reference-label:
+
 NGINX Plus HTTP Load balancing
 ==============================
 

@@ -1,3 +1,5 @@
+
+
 Installing NGINX Plus
 =====================
 
@@ -86,7 +88,7 @@ Exercise 1: Install NGINX Plus
    c. Run installation commands
 
       .. code:: bash
-         
+
          apt-get update
 
          mkdir -p /etc/ssl/nginx
@@ -267,4 +269,6 @@ Now that NGINX Plus is installed, browse to the NGINX configuration root,
    .. code:: bash
 
       cd /etc/nginx/modules  
-      ls -al 
+      ls -al
+
+:ref:`my-reference-label`.
