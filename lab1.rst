@@ -86,7 +86,8 @@ Exercise 1: Install NGINX Plus
    c. Run installation commands
 
       .. code:: bash
-
+         apt-get update
+         
          mkdir -p /etc/ssl/nginx
          cp nginx-repo.* /etc/ssl/nginx
          wget http://nginx.org/keys/nginx_signing.key && sudo apt-key add nginx_signing.key
