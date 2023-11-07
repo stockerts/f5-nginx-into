@@ -50,7 +50,7 @@ Exercise 1: Install NGINX Plus
 
    **Select Workspace**
 
-   .. image:: ../images/2020-06-29_20-56.png
+   .. image:: ./images/2020-06-29_20-56.png
 
    If you are prompted **Are you sure you want to continue?** Select
    **continue**
