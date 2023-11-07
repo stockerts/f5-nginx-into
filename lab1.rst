@@ -270,5 +270,3 @@ Now that NGINX Plus is installed, browse to the NGINX configuration root,
 
       cd /etc/nginx/modules  
       ls -al
-
-:ref:`my-reference-label`.
