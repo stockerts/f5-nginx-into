@@ -36,7 +36,7 @@ Exercise 1: Inspect the NGINX configuration and rewrite logs
 #. In the **WORKSPACE** folder found on the desktop, double click the
    **NGINX-PLUS-1** workspace shortcut to open Visual Studio Code.
 
-   .. image:: ../images/2020-06-29_15-55.png
+   .. image:: ./images/2020-06-29_15-55.png
 
 #. In the VSCode, open a terminal window by selecting **View > Terminal.** 
    You will now be able to both run NGINX commands and edit NGINX Plus
