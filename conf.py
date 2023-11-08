@@ -1,5 +1,4 @@
 # Configuration file for the Sphinx documentation builder.
-import f5_sphinx_theme
 
 # -- Project information
 
