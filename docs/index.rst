@@ -1,15 +1,12 @@
-F5 NGINX Introduction - Index
-=======================
+NGINX Plus Introdution
+=====================
 
-|repoinfo|
+Welcome to our F5 NGINX Plus introduction, where you will install and configure an NGINX Plus Load Balancer.
+
+Index
+------------
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-   :glob:
 
-   class1/class*
-   class2/class*
-   class3/class*
-
-   
+   lab1
+   lab2
