@@ -87,24 +87,47 @@ Exercise 1: Install NGINX Plus
          ls
 
    c. Run installation commands
-
+      
+      Update Packages
       .. code:: bash
 
          apt-get update
+      
+      Create NGINX directory
+      .. code:: bash
 
          mkdir -p /etc/ssl/nginx
          cp nginx-repo.* /etc/ssl/nginx
+
+      Install Signing Prerequisites
+      .. code:: bash
+
          wget http://nginx.org/keys/nginx_signing.key && sudo apt-key add nginx_signing.key
          apt-get install apt-transport-https lsb-release ca-certificates wget gnupg2 ubuntu-keyring
+
+      Download and add NGINX signing key and App Protect security updates signing key
+      .. code:: bash
 
          wget -qO - https://cs.nginx.com/static/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
          wget -qO - https://cs.nginx.com/static/keys/app-protect-security-updates.key | gpg --dearmor | sudo tee /usr/share/keyrings/app-protect-security-updates.gpg >/dev/null
 
+      Add the NGINX Plus repository
+      .. code:: bash
+
          printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://pkgs.nginx.com/plus/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-plus.list
 
+      add NGINX Package
+      .. code:: bash
+
          wget -P /etc/apt/apt.conf.d https://cs.nginx.com/static/files/90pkgs-nginx
+      
+      Update Packages
+      .. code:: bash
 
          apt-get update
+      
+      Install NGINX Plus
+      .. code:: bash
 
          apt-get install -y nginx-plus
 
