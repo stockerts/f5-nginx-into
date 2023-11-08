@@ -88,7 +88,7 @@ Exercise 1: Install NGINX Plus
 
    c. Run installation commands
       
-      
+
       Update Packages
 
       .. code:: bash
@@ -122,7 +122,7 @@ Exercise 1: Install NGINX Plus
 
          printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://pkgs.nginx.com/plus/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-plus.list
 
-      add NGINX Package
+      Download the apt configuration
 
       .. code:: bash
 
@@ -145,6 +145,33 @@ Exercise 1: Install NGINX Plus
    .. code:: bash
 
       nginx -v
+
+#. Install the NGINX App Protect
+
+      Add the NGINX App Protect repository
+
+      .. code:: bash
+
+         printf "deb https://pkgs.nginx.com/app-protect/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-app-protect.list
+
+         printf "deb https://pkgs.nginx.com/app-protect-security-updates/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/app-protect-security-updates.list
+
+      Install NGINX App Protect
+
+      .. code:: bash
+
+         apt-get install app-protect
+
+     .. note::
+
+      In the output of the previous command view the instructions to enable
+      the module via the NGINX config. **We will do this later:**
+
+      ``The App Protect module for NGINX Plus have been installed. 
+      To enable these modules, add the following to /etc/nginx/nginx.conf 
+      and reload nginx:`` 
+
+         **load_module modules/ngx_http_app_protect_module.so;** 
 
 #. Install the NGINX Plus GeoIP2 Dynamic Module
 
@@ -273,6 +300,20 @@ Now that NGINX Plus is installed, browse to the NGINX configuration root,
 
 
 #. Select the **nginx.conf** file in the VSCode Explorer section.
+
+#. To enable App Protect module for NGINX Plus that have been
+   installed, add the following lines to **/etc/nginx/nginx.conf** in the
+   **main context** and **reload nginx**:
+
+   .. code:: nginx
+
+      load_module modules/ngx_http_app_protect_module.so;
+
+   Add within the http/server/location context
+
+   .. code:: nginx
+   
+      app_protect_enable on;
 
 #. To enable the 3rd-party GeoIP2 dynamic modules for NGINX Plus that have been
    installed, add the following lines to **/etc/nginx/nginx.conf** in the
