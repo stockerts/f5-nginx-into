@@ -1,7 +1,7 @@
 # Configuration file for the Sphinx documentation builder.
 # -- Project information
 
-project = 'NGINX Plus Intro'
+project = 'NGINX Plus Introdution'
 copyright = '2023'
 author = 'F5'
 
@@ -29,6 +29,11 @@ templates_path = ['_templates']
 # -- Options for HTML output
 #
 html_theme = 'press'
+
+html_sidebars = {
+   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
+   'using/windows': ['windowssidebar.html', 'searchbox.html'],
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
