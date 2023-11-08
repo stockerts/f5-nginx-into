@@ -6,6 +6,7 @@ Welcome to our F5 NGINX Plus introduction, where you will install and configure 
 Index
 ------------
 
-#. `NGINX Plus Installation </lab1.rst/>`__
+.. toctree::
 
-#. `NGINX Plus Load Balancing  </lab2.rst/>`__
+   lab1
+   lab2
