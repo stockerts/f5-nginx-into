@@ -148,21 +148,21 @@ Exercise 1: Install NGINX Plus
 
 #. Install the NGINX App Protect
 
-      Add the NGINX App Protect repository
+   Add the NGINX App Protect repository
 
-      .. code:: bash
+   .. code:: bash
 
-         printf "deb https://pkgs.nginx.com/app-protect/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-app-protect.list
+      printf "deb https://pkgs.nginx.com/app-protect/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-app-protect.list
 
-         printf "deb https://pkgs.nginx.com/app-protect-security-updates/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/app-protect-security-updates.list
+      printf "deb https://pkgs.nginx.com/app-protect-security-updates/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/app-protect-security-updates.list
 
-      Install NGINX App Protect
+   Install NGINX App Protect
 
-      .. code:: bash
+   .. code:: bash
 
-         apt-get install app-protect
+      apt-get install app-protect
 
-     .. note::
+   .. note::
 
       In the output of the previous command view the instructions to enable
       the module via the NGINX config. **We will do this later:**
