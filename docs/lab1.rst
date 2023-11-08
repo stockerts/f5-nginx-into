@@ -168,6 +168,7 @@ balancer and test/verify configured functionality.
    .. image:: ./images/2020-06-29_20-56.png
 
    .. image:: ./images/2020-06-26_12-27.png
+      :width: 800 px
 
 #. In VSCode, open a **terminal window**, using **View > Terminal menu** 
    command. You will now be able to both run NGINX commands and edit NGINX Plus
@@ -235,7 +236,7 @@ Now that NGINX Plus is installed, browse to the NGINX configuration root,
 #. Enter **/etc/nginx** in the open folder menu the click **OK**
 
    .. image:: ./images/2020-06-29_21-07.png
-      :width: 200 px
+      :width: 800 px
 
 
 #. Select the **nginx.conf** file in the VSCode Explorer section.
@@ -252,7 +253,7 @@ Now that NGINX Plus is installed, browse to the NGINX configuration root,
    For example, it may look like this:
 
    .. image:: ./images/2020-06-29_21-11.png
-      :width: 200 px
+      :width: 800 px
 
 #. In the terminal window select **File > Save** or use **ctrl+s** to save the
    file.
@@ -265,7 +266,7 @@ Now that NGINX Plus is installed, browse to the NGINX configuration root,
       nginx -t && nginx -s reload
 
    .. image:: ./images/2020-06-29_21-13.png
-      :width: 200 px
+      :width: 800 px
 
 #. See which Dynamic modules are installed:
 

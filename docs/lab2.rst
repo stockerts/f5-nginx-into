@@ -43,6 +43,7 @@ Exercise 1: Inspect the NGINX configuration and rewrite logs
    configuration files via the VSCode Console and terminal.
 
    .. image:: ./images/2020-06-29_16-02_1.png
+      :width: 800 px
       
 #. Now inspect **/etc/nginx/nginx.conf**.
    
