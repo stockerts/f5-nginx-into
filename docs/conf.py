@@ -24,22 +24,18 @@ intersphinx_mapping = {
 }
 intersphinx_disabled_domains = ['std']
 
-templates_path = ['_templates']
+#templates_path = ['_templates']
 
 # -- Options for HTML output
 #
 html_theme = 'press'
 
-html_sidebars = {
-   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
-   'using/windows': ['windowssidebar.html', 'searchbox.html'],
-}
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 # html_static_path = ['_static']
-html_css_files = ['theme_overrides.css']
+
+#html_css_files = ['theme_overrides.css']
 
 # If true, "Created using Sphinx" is shown in the HTML footer. The default is True.
 #
@@ -52,11 +48,11 @@ html_show_copyright = True
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #
-html_logo = "docs/images/f5-logo-solid-rgb_small.png"
+#html_logo = "docs/images/f5-logo-solid-rgb_small.png"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
-html_short_title = "Home"
+#html_short_title = "Home"
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
