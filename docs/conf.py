@@ -1,5 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
-
+import f5_sphinx_theme
 # -- Project information
 
 project = 'NGINX Plus Intro'
@@ -28,8 +28,9 @@ intersphinx_disabled_domains = ['std']
 templates_path = ['_templates']
 
 # -- Options for HTML output
-
-html_theme = 'sphinx_rtd_theme'
+html_theme = "f5_sphinx_theme"
+html_theme_path = f5_sphinx_theme.get_html_theme_path()
+#html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 html_css_files = ['theme_overrides.css']
 
