@@ -101,6 +101,7 @@ Exercise 1: Inspect the NGINX configuration and rewrite logs
    the right.
 
    .. image:: ./images/2020-06-26_12-53.png
+      :width: 1000 px
 
 #. In the terminal shell, run the following commands:
 
