@@ -29,6 +29,10 @@ Before being able to use NGINX Plus you will need the following:
 .. seealso:: Official installing NGINX documentation:
    `Installing NGINX Plus 
    <https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-plus/>`_
+
+   Official NGINX App Protect documentation:
+   `App Protect Module
+   <https://docs.nginx.com/nginx-app-protect-waf/admin-guide/install/#ubuntu-1804--ubuntu-2004--ubuntu-2204-installation/>`_
    
    Official NGINX GeoIP2 documentation:
    `GeoIP2 Module 
@@ -107,7 +111,7 @@ Exercise 1: Install NGINX Plus
       .. code:: bash
 
          wget http://nginx.org/keys/nginx_signing.key && sudo apt-key add nginx_signing.key
-         apt-get install apt-transport-https lsb-release ca-certificates wget gnupg2 ubuntu-keyring
+         apt-get install -y apt-transport-https lsb-release ca-certificates wget gnupg2 ubuntu-keyring
 
       Download and add NGINX signing key and App Protect security updates signing key
 
@@ -146,17 +150,16 @@ Exercise 1: Install NGINX Plus
 
       nginx -v
 
-#. Install the NGINX App Protect
+#. Install the NGINX Plus App Protect
 
-   Add the NGINX App Protect repository
+   Add the App Protect repository
 
    .. code:: bash
 
-      printf "deb https://pkgs.nginx.com/app-protect/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-app-protect.list
+      printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://pkgs.nginx.com/app-protect/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-app-protect.list
+      printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://pkgs.nginx.com/app-protect-security-updates/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/app-protect-security-updates.list
 
-      printf "deb https://pkgs.nginx.com/app-protect-security-updates/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/app-protect-security-updates.list
-
-   Install NGINX App Protect
+   Install App Protect
 
    .. code:: bash
 
