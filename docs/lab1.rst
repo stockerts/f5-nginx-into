@@ -311,7 +311,7 @@ Now that NGINX Plus is installed, browse to the NGINX configuration root,
    
    For example, it may look like this:
 
-   .. image:: ./images/module.png
+   .. image:: ./images/modules.png
 
    To enabled App Protect, additional updates will need to be made to **/etc/nginx/nginx.conf** 
 
