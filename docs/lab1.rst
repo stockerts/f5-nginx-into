@@ -111,6 +111,7 @@ Exercise 1: Install NGINX Plus
       .. code:: bash
 
          wget http://nginx.org/keys/nginx_signing.key && sudo apt-key add nginx_signing.key
+         wget https://cs.nginx.com/static/keys/app-protect-security-updates.key && sudo apt-key add app-protect-security-updates.key
          apt-get install -y apt-transport-https lsb-release ca-certificates wget gnupg2 ubuntu-keyring
 
       Download and add NGINX signing key and App Protect security updates signing key
