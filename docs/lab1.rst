@@ -71,7 +71,7 @@ Exercise 1: Install NGINX Plus
 
    .. note:: Terminal will appear on the bottom portion of the VSCode window.
    
-   .. image:: ./images/2020-06-26_12-27.png
+   .. image:: ./images/vscode.png
       :width: 1000 px
 
 #. In the terminal run the following commands to install NGINX Plus
@@ -127,7 +127,7 @@ Exercise 1: Install NGINX Plus
 
          printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://pkgs.nginx.com/plus/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-plus.list
          printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://pkgs.nginx.com/app-protect/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-app-protect.list
-         printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://pkgs.nginx.com/app-protect-security-updates/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/app-protect-security-updates.list
+         printf "deb [signed-by=/usr/share/keyrings/app-protect-security-updates.gpg] https://pkgs.nginx.com/app-protect-security-updates/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/app-protect-security-updates.list
 
       Download the apt configuration
 
@@ -157,7 +157,7 @@ Exercise 1: Install NGINX Plus
 
    .. code:: bash
 
-      apt-get install app-protect
+      apt-get install -y app-protect
 
    .. note::
 
@@ -224,7 +224,7 @@ balancer and test/verify configured functionality.
 
    .. image:: ./images/2020-06-29_20-56.png
 
-   .. image:: ./images/2020-06-26_12-27.png
+   .. image:: ./images/vscode.png
       :width: 1000 px
 
 #. In VSCode, open a **terminal window**, using **View > Terminal menu** 
@@ -298,33 +298,25 @@ Now that NGINX Plus is installed, browse to the NGINX configuration root,
 
 #. Select the **nginx.conf** file in the VSCode Explorer section.
 
-#. To enable App Protect module for NGINX Plus that have been
+#. To enable modules for NGINX Plus that have been
    installed, add the following lines to **/etc/nginx/nginx.conf** in the
    **main context** and **reload nginx**:
 
    .. code:: nginx
 
       load_module modules/ngx_http_app_protect_module.so;
-
-   Add within the http/server/location context
-
-   .. code:: nginx
-   
-      app_protect_enable on;
-
-#. To enable the 3rd-party GeoIP2 dynamic modules for NGINX Plus that have been
-   installed, add the following lines to **/etc/nginx/nginx.conf** in the
-   **main context** and **reload nginx**:
-
-   .. code:: nginx
-
       load_module modules/ngx_http_geoip2_module.so; 
       load_module modules/ngx_stream_geoip2_module.so;
 
    For example, it may look like this:
 
-   .. image:: ./images/2020-06-29_21-11.png
-      :width: 1000 px
+   .. image:: ./images/module.png
+
+   To enabled App Protect, additional updates will need to be made to **/etc/nginx/nginx.conf** 
+
+   For example, it may look like this:
+
+   .. image:: ./images/appprotect.png
 
 #. In the terminal window select **File > Save** or use **ctrl+s** to save the
    file.
