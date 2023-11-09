@@ -161,8 +161,8 @@ Exercise 1: Install NGINX Plus
 
    .. note:: 
       
-      Installing **NGINX App-Protect** installs **NGINX Plus**. 
-      Installation was seperated in this lab for demonstration purposes only.
+      Installing **NGINX App-Protect** installs **NGINX-Plus**. 
+      Seperated installation was for lab demonstration purposes only.
 
    .. note::
 
