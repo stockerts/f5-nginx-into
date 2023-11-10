@@ -159,6 +159,11 @@ Exercise 1: Install NGINX Plus
 
       apt-get install -y app-protect
 
+   .. note:: 
+      
+      Installing **NGINX App-Protect** installs **NGINX-Plus**. 
+      Seperated installation was for lab demonstration purposes only.
+
    .. note::
 
       In the output of the previous command view the instructions to enable
